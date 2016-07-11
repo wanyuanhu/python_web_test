@@ -182,8 +182,8 @@ def _select(sql, first, *args):
     try:
         cursor = _db_ctx.connection.cursor()
         cursor.execute(sql, args)
-        if cursor.descriptions():
-            names = [x[0] for x in cursor.descriptions()]
+        if cursor.description:
+            names = [x[0] for x in cursor.description]
         if first:
             values = cursor.fetchone()
             if not values:

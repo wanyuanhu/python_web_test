@@ -3,7 +3,7 @@ from transwarp import db
 
 db.create_engine(user='root', password='456987410', database='awesome')
 
-u = User(name='Test', email='test@example.com', passwd='1234567890', image='about:blank')
+u = User(name='Test', email='test@example.com', password='1234567890', image='about:blank')
 
 u.insert()
 
